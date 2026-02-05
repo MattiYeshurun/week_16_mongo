@@ -45,7 +45,7 @@ def get_top_seniority_employees_excluding_hr():
     return query
 
 def get_employees_by_age_or_seniority():
-    pass
+    query = run_query({"$or": [{"age": {"$gt": 50}}, "years_at_company": {"$lt": 3}]}, {"employee_id": 1, "name": 1, "age": 1, "years_at_company": 1, "_id": 0 })
 
 def get_managers_excluding_departments():
     pass
